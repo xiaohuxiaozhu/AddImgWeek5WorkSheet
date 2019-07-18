@@ -31,6 +31,10 @@ public class Message {
     @Size(min=3)
     private String postedBy;
 
+    private String name;
+    private String realname;
+    private String headshot;
+
 
     public long getId() {
         return id;
@@ -70,5 +74,29 @@ public class Message {
 
     public void setPostedBy(String postedBy) {
         this.postedBy = postedBy;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getRealname() {
+        return realname;
+    }
+
+    public void setRealname(String realname) {
+        this.realname = realname;
+    }
+
+    public String getHeadshot() {
+        return headshot;
+    }
+
+    public void setHeadshot(String headshot) {
+        this.headshot = headshot;
     }
 }

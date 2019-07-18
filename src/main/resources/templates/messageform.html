@@ -8,7 +8,10 @@
 <form action="#"
       th:action="@{/process}"
       th:object="${message}"
-      method="post">
+      method="post"
+      enctype="multipart/form-data">
+
+
 
     <input type="hidden" th:field="*{id}" />
     Title :<input type="text" th:field="*{title}" />
@@ -27,6 +30,10 @@
     <span th:if="${#fields.hasErrors('postedBy')}"
           th:errors="*{postedBy}"></span><br />
 
+    Name:<input type="text" th:field="*{name}" />
+    Real Name: <input type="text" th:field="*{realname}" />
+    <input type="file" name="file" /><br/><br/>
+
     <br/>
     <input type="submit" value="Submit" />
 
@@ -36,5 +43,7 @@
 
 
 </form>
+
+
 </body>
 </html>

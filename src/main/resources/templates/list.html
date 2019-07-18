@@ -41,6 +41,12 @@
         <td th:text="${message.title}"></td>
         <td th:text="${message.postedDate}"></td>
         <td th:text="${message.postedBy}"></td>
+        <div th:if="${message.headshot} !=nall">
+            <img th:scr="${message.headshot}" />
+            <hr/>
+        </div>
+        <h3 th:text="${message.name}"></h3>
+        <h4 th:text="${message.realname}"></h4>
 
         <td>
             <a th:href="@{/update/{id}(id=${message.id})}">Update</a>-
@@ -50,6 +56,21 @@
     </tr>
 
 </table>
+
+<!--<table>-->
+    <!--<a href="/add">Add an Actor</a>-->
+    <!--<div th:each="message : ${messages}">-->
+        <!--<div th:if="${message.headshot} !=nall">-->
+            <!--<img th:scr="${message.headshot}" />-->
+            <!--<hr/>-->
+        <!--</div>-->
+        <!--<h3 th:text="${message.name}"></h3>-->
+        <!--<h4 th:text="${message.realname}"></h4>-->
+
+    <!--</div>-->
+
+<!--</table>-->
+
     </div>
 </div>
 </body>
