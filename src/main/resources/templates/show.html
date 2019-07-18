@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Show</title>
+    <th:block th:insert="Base :: bootstrap-css"></th:block>
 </head>
 <body>
+
+<div class="container-fluid mt-3">
+    <div th:insert="Base :: navbar"></div>
+
+    <br/>
+    <br/>
+    <br>
+
+
+    <div class="jumbotron text-center">
 <a href="/">Show All Message</a><br />
 Title :<span th:text="${message.title}" ></span><br />
 Content :<p th:text="${message.content}"></p>
@@ -12,6 +23,7 @@ Posted Date:<span th:text="${message.postedDate}"></span><br />
 Posted By : <span th:text="${message.postedBy}"></span><br />
 <a th:href="@{/delete/{id}(id=${message.id})}">Delete this message</a>
 
-
+</div>
+</div>
 </body>
 </html>

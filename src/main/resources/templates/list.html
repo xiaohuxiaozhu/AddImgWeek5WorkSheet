@@ -3,10 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>List</title>
-</head>
+
+
+      <th:block th:insert="Base :: bootstrap-css"></th:block>
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Belgrano|Flamenco&display=swap" rel="stylesheet">
+
+            </head>
 <body>
+
+<div class="container-fluid mt-3">
+<div th:insert="Base :: navbar"></div>
+
+
+
+
+<br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="jumbotron text-center">
 <a href="/add">Add Message</a><br />
-<table>
+<table align="center">
     <tr>
         <th>Title</th>
 
@@ -27,5 +50,7 @@
     </tr>
 
 </table>
+    </div>
+</div>
 </body>
 </html>
